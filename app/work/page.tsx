@@ -75,7 +75,39 @@ const projects = [
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
-  return <div>Work page</div>;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+    >
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+          {/* text */}
+          <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+            {/* outline num */}
+            <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              {project.num}
+            </div>
+
+            {/* project category */}
+            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              {project.category} project
+            </h2>
+
+            {/* project description */}
+            <p className="text-white/60">{project.description}</p>
+
+            {/* stacks */}
+            <ul></ul>
+          </div>
+
+          {/* slide */}
+          <div className="w-full xl:w-1/2">slide</div>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
 export default Work;
