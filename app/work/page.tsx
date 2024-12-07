@@ -99,7 +99,15 @@ const Work = () => {
             <p className="text-white/60">{project.description}</p>
 
             {/* stacks */}
-            <ul></ul>
+            <ul className="flex gap-4">
+              {project.stack.map((item, index) => (
+                <li key={index} className="text-xl text-accent">
+                  {item.name}
+                  {/* remove the last coma */}
+                  {index !== project.stack.length - 1 && ","}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* slide */}
