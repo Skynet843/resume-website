@@ -60,9 +60,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
     stack: [
-      { name: "HTML 5" },
-      { name: "CSS 3" },
-      { name: "JavaScript" },
+      { name: "TypeScript" },
       { name: "React.Js" },
       { name: "Next.Js" },
       { name: "Tailwind css" },
@@ -192,7 +190,11 @@ const Work = () => {
               })}
 
               {/* slider button */}
-              <WorkSliderBtns containerStyles="" btnStyles="" iconStyles="" />
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconStyles="text-[25px]"
+              />
             </Swiper>
           </div>
         </div>
