@@ -28,15 +28,16 @@ export const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[295px] h-[295px] xl:w-[495px] xl:h-[495px] mix-blend-lighten absolute top-0.5 left-0.5 xl:top-1.5 xl:left-1.5"
         >
           <Image
-            src="/assets/photo.png"
+            // src="/assets/yes-removebg-preview.png"
+            src="/assets/my-photo.webp"
             priority
-            quality={100}
+            quality={50}
             fill
-            alt=""
-            className="object-contain"
+            alt="profile picture"
+            className="object-contain p-0.5"
           />
         </motion.div>
 
@@ -52,7 +53,7 @@ export const Photo = () => {
             cy="253"
             r="250"
             stroke="#00ff99"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{
