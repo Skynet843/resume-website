@@ -41,7 +41,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia adipisci quas, quae inventore corrupti blanditiis unde error exercitationem natus.",
+    "Passionate full-stack developer with expertise in optimizing web applications. Specializing in React.js, Node.js, Django, and AWS deployments.",
   info: [
     {
       fieldName: "Name",
@@ -79,7 +79,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia adipisci quas, quae inventore corrupti blanditiis unde error exercitationem natus.",
+    "2 years of experience developing scalable, high-performance web applications with React.js, Django, and GraphQL, focusing on front-end optimization, API design, and AWS deployments.",
   info: [
     {
       company: "AIMonk Labs Pvt. Ltd.",
@@ -95,7 +95,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia adipisci quas, quae inventore corrupti blanditiis unde error exercitationem natus.",
+    "Continuous learner with education in AWS and web development. Enhancing university degree with technical certifications for industry relevance.",
   items: [
     {
       institution: "Scaler",
@@ -121,7 +121,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia adipisci quas, quae inventore corrupti blanditiis unde error exercitationem natus.",
+    "Versatile full-stack developer skilled in modern web technologies. Experienced in React.js ecosystem, Python frameworks, and cloud infrastructure.",
   skillsList: [
     {
       icon: <FaHtml5 />,
