@@ -57,8 +57,9 @@ const Contact = () => {
               <h3 className="text-4xl text-accent">Let&apos;s work togather</h3>
 
               <p className="text-white/60 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium harum, suscipit ut adipisci ipsam.
+                Ready to bring your web projects to life with optimized
+                performance. Let&apos;s collaborate to create innovative
+                solutions using modern technologies.
               </p>
 
               {/* input */}
