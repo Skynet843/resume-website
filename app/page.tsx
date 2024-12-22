@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -7,6 +8,14 @@ import { Photo } from "@/components/Photo";
 import { Stats } from "@/components/Stats";
 
 export default function Home() {
+  // handle resume download
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/api/download"; // API route for download
+    link.download = "Mahadeb_Sen_Resume.pdf"; // Suggested file name
+    link.click();
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -29,6 +38,7 @@ export default function Home() {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               {/* resume btn */}
               <Button
+                onClick={() => handleDownload()}
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
