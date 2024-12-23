@@ -14,6 +14,7 @@ import {
   SiLinux,
   SiRazorpay,
   SiFirebase,
+  SiStyledcomponents,
 } from "react-icons/si";
 
 import {
@@ -148,16 +149,20 @@ const skills = {
       name: "Tailwind css",
     },
     {
+      icon: <SiStyledcomponents />,
+      name: "Styled components",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "Next.js",
+    },
+    {
       icon: <FaReact />,
       name: "React.js",
     },
     {
       icon: <SiRedux />,
       name: "Redux.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "Next.js",
     },
     {
       icon: <SiFirebase />,
