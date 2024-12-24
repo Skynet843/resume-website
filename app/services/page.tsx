@@ -9,29 +9,29 @@ const services = [
     num: "01",
     title: "Full stack Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti magni temporibus voluptatem assumenda consectetur",
-    href: "",
+      "Building web solutions with React, Node.js, and Django. Expert in AWS deployment and payment integrations.",
+    href: "/contact?service=full-stack",
   },
   {
     num: "02",
     title: "Frontend Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti magni temporibus voluptatem assumenda consectetur",
-    href: "",
+      "Creating optimized React applications with TypeScript and Redux. Specialist in performance and user engagement.",
+    href: "/contact?service=frontend",
   },
   {
     num: "03",
     title: "Backend Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti magni temporibus voluptatem assumenda consectetur",
-    href: "",
+      "Developing fast, secure APIs with Node.js and Django. Expert in GraphQL and database optimization.",
+    href: "/contact?service=backend",
   },
   {
     num: "04",
     title: "Python Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti magni temporibus voluptatem assumenda consectetur",
-    href: "",
+      "Building scalable Django applications with custom authentication systems and API development.",
+    href: "/contact?service=python",
   },
 ];
 
