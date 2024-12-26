@@ -100,6 +100,7 @@ const ContactForm = () => {
                 },
               })
             }
+            onClick={removeServiceParam}
             type="firstname"
             placeholder="First name"
           />
@@ -113,6 +114,7 @@ const ContactForm = () => {
                 },
               })
             }
+            onClick={removeServiceParam}
             type="lastname"
             placeholder="Last name"
           />
@@ -126,6 +128,7 @@ const ContactForm = () => {
                 },
               })
             }
+            onClick={removeServiceParam}
             type="email"
             placeholder="Email"
           />
@@ -139,6 +142,7 @@ const ContactForm = () => {
                 },
               })
             }
+            onClick={removeServiceParam}
             placeholder="Phone number"
           />
         </div>
@@ -194,6 +198,7 @@ const ContactForm = () => {
               },
             })
           }
+          onClick={removeServiceParam}
           placeholder="Type your message here."
         />
 
