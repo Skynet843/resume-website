@@ -24,4 +24,13 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  .toast-progress-bar {
+    background-color: #01ff99 !important;
+  }
+
+  .success-background {
+    background-color: #35353a !important;
+    color: #fff !important;
+  }
 }
