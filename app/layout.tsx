@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 // Components
 import { Header } from "@/components/Header";
@@ -28,6 +30,7 @@ export default function RootLayout({
       <body className={jetBrainsMono.variable}>
         <Header />
         <StairTransition />
+        <ToastContainer />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
