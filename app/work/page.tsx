@@ -19,8 +19,23 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+interface Project {
+  num: string;
+  category: string;
+  title: string;
+  description: string;
+  stack: { name: string }[];
+  image: string;
+  live: string;
+  github: string;
+}
+
+interface SwiperInstance {
+  activeIndex: number;
+}
+
 // projects data
-const projects = [
+const projects: Project[] = [
   {
     num: "01",
     category: "Full-stack",
@@ -74,7 +89,7 @@ const projects = [
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: SwiperInstance) => {
     // get current slide index
     const currentIndex = swiper.activeIndex;
 
