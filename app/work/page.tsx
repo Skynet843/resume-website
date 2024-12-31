@@ -18,13 +18,27 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import {
+  SiExpress,
+  SiFirebase,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNodedotjs,
+  SiReact,
+  SiReacthookform,
+  SiReactquery,
+  SiRedux,
+  SiShadcnui,
+  SiTailwindcss,
+  SiVite,
+} from "react-icons/si";
 
 interface Project {
   num: string;
   category: string;
   title: string;
   description: string;
-  stack: { name: string }[];
+  stack: { name: string; icon: React.ReactElement }[];
   image: string;
   live: string;
   github: string;
@@ -39,50 +53,98 @@ const projects: Project[] = [
   {
     num: "01",
     category: "Full-stack",
-    title: "project 1",
+    title: "Foxtech (Manufacturer site)",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
     stack: [
-      { name: "HTML 5" },
-      { name: "CSS 3" },
-      { name: "JavaScript" },
-      { name: "React.Js" },
+      {
+        name: "React.Js",
+        icon: <SiReact />,
+      },
+      {
+        name: "React query",
+        icon: <SiReactquery />,
+      },
+      {
+        name: "React-hook-form",
+        icon: <SiReacthookform />,
+      },
+      {
+        name: "Tailwind css",
+        icon: <SiTailwindcss />,
+      },
+      {
+        name: "Firebase",
+        icon: <SiFirebase />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+      },
+      {
+        name: "Node.Js",
+        icon: <SiNodedotjs />,
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+      },
+      {
+        name: "JWT",
+        icon: <SiJsonwebtokens />,
+      },
     ],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    image: "/assets/work/foxtech.png",
+    live: "https://foxtech-90c48.web.app/",
+    github: "https://github.com/MahadebSen/Foxtech-client-12.git",
   },
   {
     num: "02",
     category: "Full-stack",
-    title: "project 2",
+    title: "TechNet (E-commerce site)",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
     stack: [
-      { name: "Next.Js" },
-      { name: "Tailwind css" },
-      { name: "React.Js" },
-      { name: "Node.Js" },
+      {
+        name: "Vite.js",
+        icon: <SiVite />,
+      },
+      {
+        name: "Redux toolkit",
+        icon: <SiRedux />,
+      },
+      {
+        name: "React-hook-form",
+        icon: <SiReacthookform />,
+      },
+      {
+        name: "Tailwind css",
+        icon: <SiTailwindcss />,
+      },
+      {
+        name: "Shadcn ui",
+        icon: <SiShadcnui />,
+      },
+      {
+        name: "Firebase",
+        icon: <SiFirebase />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+      },
+      {
+        name: "Node.Js",
+        icon: <SiNodedotjs />,
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+      },
     ],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "Full-stack",
-    title: "project 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
-    stack: [
-      { name: "TypeScript" },
-      { name: "React.Js" },
-      { name: "Next.Js" },
-      { name: "Tailwind css" },
-    ],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    image: "/assets/work/technet.png",
+    live: "https://technet-81747.web.app/",
+    github: "https://github.com/MahadebSen/TechNet-redux-toolkit.git",
   },
 ];
 
@@ -129,12 +191,24 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
 
               {/* stacks */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => (
-                  <li key={index} className="text-xl text-accent">
-                    {item.name}
+                  <li key={index} className="text-4xl text-accent">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="group">
+                          <div className="hover:text-white transition-all duration-300">
+                            {item.icon}
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{item.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                    {/* {item.icon} */}
                     {/* remove the last coma */}
-                    {index !== project.stack.length - 1 && ","}
+                    {/* {index !== project.stack.length - 1 && ","} */}
                   </li>
                 ))}
               </ul>
@@ -145,7 +219,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -159,7 +233,7 @@ const Work = () => {
                 </Link>
 
                 {/* github repo button */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -186,7 +260,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 ">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
 
