@@ -106,7 +106,7 @@ const education = {
     },
     {
       institution: "Programming Hero",
-      degree: "Frontend Web Development",
+      degree: "Complete Web Development",
       duration: "Dec 2021 - Aug 2022",
       link: "https://drive.google.com/file/d/1RNo449r3jTkzFoqFC1UuED51qplBF1x1/view",
     },
