@@ -8,23 +8,27 @@ type WorkSliderBtnsProps = {
   containerStyles: string;
   btnStyles: string;
   iconStyles: string;
+  leftButtonDisabled?: boolean;
+  rightButtonDisabled?: boolean;
 };
 
 const WorkSliderBtns: FC<WorkSliderBtnsProps> = ({
   containerStyles,
   btnStyles,
   iconStyles,
+  leftButtonDisabled,
+  rightButtonDisabled,
 }) => {
   const swiper = useSwiper();
   return (
     <div className={containerStyles}>
-      <button className={btnStyles}>
+      <button className={btnStyles} disabled={leftButtonDisabled}>
         <PiCaretLeftBold
           className={iconStyles}
           onClick={() => swiper.slidePrev()}
         />
       </button>
-      <button className={btnStyles}>
+      <button className={btnStyles} disabled={rightButtonDisabled}>
         <PiCaretRightBold
           className={iconStyles}
           onClick={() => swiper.slideNext()}
