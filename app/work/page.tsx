@@ -34,6 +34,7 @@ import {
 } from "react-icons/si";
 
 interface Project {
+  serialNo: number;
   num: string;
   category: string;
   title: string;
@@ -51,11 +52,12 @@ interface SwiperInstance {
 // projects data
 const projects: Project[] = [
   {
+    serialNo: 1,
     num: "01",
     category: "Full-stack",
     title: "Foxtech (Manufacturer site)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
+      "Foxtech is a manufacturer website with features like user authentication, order management, product showcases, and secure data handling, tailored for industrial businesses.",
     stack: [
       {
         name: "React.Js",
@@ -99,11 +101,12 @@ const projects: Project[] = [
     github: "https://github.com/MahadebSen/Foxtech-client-12.git",
   },
   {
+    serialNo: 2,
     num: "02",
     category: "Full-stack",
     title: "TechNet (E-commerce site)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat nobis excepturi quasi dicta nulla temporibus provident sit mollitia optio.",
+      "TechNet is a e-commerce platform made with modern tech stack offering user authentication, product search, filtering, and cart management.",
     stack: [
       {
         name: "Vite.js",
@@ -281,8 +284,12 @@ const Work = () => {
               {/* slider button */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary w-[44px] h-[44px] flex justify-center items-center transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 iconStyles="text-[25px]"
+                rightButtonDisabled={
+                  project.serialNo === projects.length ? true : false
+                }
+                leftButtonDisabled={project.serialNo === 1 ? true : false}
               />
             </Swiper>
           </div>
