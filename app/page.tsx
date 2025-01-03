@@ -6,14 +6,29 @@ import { FiDownload } from "react-icons/fi";
 import { Socials } from "@/components/Socials";
 import { Photo } from "@/components/Photo";
 import { Stats } from "@/components/Stats";
+import { useState } from "react";
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
   // handle resume download
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/api/download"; // API route for download
-    link.download = "Mahadeb_Sen_Resume.pdf"; // Suggested file name
-    link.click();
+  const downloadFile = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch("/api/download");
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "mahadeb-sen-resume.pdf";
+      link.click();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -38,13 +53,23 @@ export default function Home() {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               {/* resume btn */}
               <Button
-                onClick={() => handleDownload()}
+                onClick={() => {
+                  // setLoading(true);
+                  // handleDownload();
+                  downloadFile();
+                }}
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                disabled={loading}
               >
-                <span>Download Resume</span>
-                <FiDownload />
+                {loading ? (
+                  "Downloading..."
+                ) : (
+                  <div className="uppercase flex items-center gap-2">
+                    <span>Download Resume</span>
+                    <FiDownload />
+                  </div>
+                )}
               </Button>
 
               {/* socials */}
