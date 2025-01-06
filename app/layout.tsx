@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.variable}>
+      <body className={jetBrainsMono.variable} suppressHydrationWarning>
         <Header />
         <StairTransition />
         <ToastContainer />
