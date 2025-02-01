@@ -15,18 +15,18 @@ const links = [
     name: "home",
     path: "/",
   },
-  {
-    name: "services",
-    path: "/services",
-  },
+  // {
+  //   name: "services",
+  //   path: "/services",
+  // },
   {
     name: "resume",
     path: "/resume",
   },
-  {
-    name: "work",
-    path: "/work",
-  },
+  // {
+  //   name: "work",
+  //   path: "/work",
+  // },
   {
     name: "contact",
     path: "/contact",
@@ -47,7 +47,7 @@ export const MobileNav = () => {
           <SheetClose asChild>
             <Link href="/">
               <h1 className="text-4xl font-semibold">
-                Mahadeb
+                Souvik
                 <span className="text-accent">.</span>
               </h1>
             </Link>

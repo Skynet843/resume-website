@@ -15,6 +15,21 @@ import {
   SiRazorpay,
   SiFirebase,
   SiStyledcomponents,
+  SiJest,
+  SiCypress,
+  SiNodedotjs,
+  SiPython,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiFastapi,
+  SiKeras,
+  SiTensorflow,
+  SiPytorch,
+  SiGit,
+  SiJenkins,
+  SiDocker,
 } from "react-icons/si";
 
 import {
@@ -26,6 +41,7 @@ import {
   FaNodeJs,
   FaAws,
   FaDocker,
+  FaJava,
 } from "react-icons/fa";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -41,10 +57,11 @@ import { duplexPair } from "stream";
 import { link } from "fs";
 
 // about data
+// about data
 const about = {
   title: "About me",
   description:
-    "Software Development Engineer, excels in AI, ML, and full-tack development, creating optimized solutions with Python, Java, React.js, AWS, and CI/CD expertise",
+    "Software Development Engineer, excels in AI, ML, and full-stack development, creating optimized solutions with Python, Java, React.js, AWS, and CI/CD expertise",
   info: [
     {
       fieldName: "Name",
@@ -56,7 +73,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      value: "2+ years",
+      value: "1+ years",
     },
     {
       fieldName: "Nationality",
@@ -82,19 +99,41 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "2 years of experience developing scalable, high-performance web applications with React.js, Django, and GraphQL, focusing on front-end optimization, API design, and AWS deployments.",
+    "Experience in developing AI-powered solutions, focusing on computer vision, video processing optimization, and scalable web applications using Python, Django, React.js, and AWS.",
   info: [
     {
-      company: "AIMonk Labs Pvt. Ltd.",
+      company: "AIMonk Labs Private Ltd",
       link: "https://aimonk.com",
       position: "Software Development Engineer",
       duration: "2024 - Present",
+      description: [
+        "Reduced video generation time from 40 mins to 5 mins through parallel processing",
+        "Built CI/CD pipelines using Docker and AWS",
+        "Developed GIF and video rendering features",
+      ],
     },
     {
-      company: "Freelancer",
+      company: "Freelance Developer",
       link: "https://souviksamanta.in",
-      position: "Android and Web Developer",
+      position: "Full Stack Developer",
       duration: "2020 - 2024",
+      description: [
+        "Developed and published Android app with 50K+ downloads on Play Store",
+        "Created custom web applications using React.js and Django",
+        "Implemented payment integrations and Firebase backends",
+        "Worked with clients to deliver scalable solutions",
+      ],
+    },
+    {
+      company: "Teaching",
+      link: "",
+      position: "Data Science & Java Programming",
+      duration: "2019 - 2024",
+      description: [
+        "Taught programming fundamentals to school and college students",
+        "Created comprehensive curriculum for Java and Python",
+        "Mentored students in DSA and competitive programming",
+      ],
     },
   ],
 };
@@ -104,7 +143,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Continuous learner with education in AWS and web development. Enhancing university degree with technical certifications for industry relevance.",
+    "Strong academic background in Information Technology with focus on computer science fundamentals and practical applications",
   items: [
     {
       institution: "Kalyani Government Engineering College",
@@ -125,95 +164,79 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Versatile full-stack developer skilled in modern web technologies. Experienced in React.js ecosystem, Python frameworks, and cloud infrastructure.",
+    "Comprehensive skillset in full-stack development, AI/ML, and DevOps technologies",
   skillsList: [
-    {
-      icon: <FaHtml5 />,
-      name: "HTML 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "CSS 3",
-    },
-    {
-      icon: <FaJs />,
-      name: "JavaScript",
-    },
-    {
-      icon: <SiTypescript />,
-      name: "TypeScript",
-    },
     {
       icon: <FaPython />,
       name: "Python",
     },
     {
-      icon: <SiTailwindcss />,
-      name: "Tailwind css",
-    },
-    {
-      icon: <SiStyledcomponents />,
-      name: "Styled components",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "Next.js",
+      icon: <FaJava />,
+      name: "Java",
     },
     {
       icon: <FaReact />,
       name: "React.js",
     },
     {
-      icon: <SiRedux />,
-      name: "Redux.js",
-    },
-    {
-      icon: <SiFirebase />,
-      name: "Firebase",
-    },
-    {
-      icon: <SiGraphql />,
-      name: "GraphQL",
-    },
-    {
-      icon: <SiApollographql />,
-      name: "Apollo Client",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "Node.js",
-    },
-    {
-      icon: <SiExpress />,
-      name: "Express.js",
-    },
-    {
       icon: <SiDjango />,
       name: "Django",
     },
     {
-      icon: <SiMongodb />,
-      name: "mongoDB",
-    },
-    {
-      icon: <SiPostgresql />,
-      name: "Postgresql",
+      icon: <SiFastapi />,
+      name: "FastAPI",
     },
     {
       icon: <FaAws />,
-      name: "aws",
+      name: "AWS",
     },
     {
       icon: <FaDocker />,
       name: "Docker",
     },
     {
+      icon: <SiGit />,
+      name: "Git",
+    },
+    {
       icon: <SiLinux />,
       name: "Linux",
     },
     {
-      icon: <SiRazorpay />,
-      name: "Razorpay integration",
+      icon: <SiPytorch />,
+      name: "PyTorch",
+    },
+    {
+      icon: <SiTensorflow />,
+      name: "TensorFlow",
+    },
+    {
+      icon: <SiKeras />,
+      name: "Keras",
+    },
+    {
+      icon: <FaJs />,
+      name: "JavaScript",
+    },
+    {
+      icon: <SiFirebase />,
+      name: "Firebase",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
+    },
+    {
+      icon: <SiJenkins />,
+      name: "Jenkins",
     },
   ],
 };
@@ -293,7 +316,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[200px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
