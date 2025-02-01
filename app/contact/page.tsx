@@ -2,6 +2,7 @@
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Suspense } from "react";
 
 // components
 import ContactForm from "@/components/ContactForm";
@@ -42,7 +43,9 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <ContactForm />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ContactForm />
+            </Suspense>
           </div>
 
           {/* info */}
