@@ -32,7 +32,7 @@ export const Photo = () => {
         >
           <Image
             // src="/assets/yes-removebg-preview.png"
-            src="/assets/my-photo.webp"
+            src="/assets/my-photo.png"
             priority
             quality={50}
             fill

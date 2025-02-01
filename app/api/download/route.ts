@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
-  const fileId = "1U0wS73Z8QAXQ8kELNzvLKM--u9GP24FT";
+  const fileId = "1_IjTMhJ5Cf00cbuoQ_htJSlK_gB3H7eq";
   const fileUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
   try {

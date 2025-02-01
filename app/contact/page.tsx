@@ -10,17 +10,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+91) 790 802 0943",
+    description: "(+91) 843 689 2673",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "mahadebsen237@gmail.com",
+    description: "souviksamanta3103@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Bishnupur, Bankura, West Bengal 722122",
+    description: "Sadatpur,Bargachia,Howrah,West Bengal,India,711404",
   },
 ];
 

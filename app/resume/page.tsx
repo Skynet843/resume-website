@@ -37,20 +37,22 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { duplexPair } from "stream";
+import { link } from "fs";
 
 // about data
 const about = {
   title: "About me",
   description:
-    "Passionate full-stack developer with expertise in optimizing web applications. Specializing in React.js, Node.js, Django, and AWS deployments.",
+    "Software Development Engineer, excels in AI, ML, and full-tack development, creating optimized solutions with Python, Java, React.js, AWS, and CI/CD expertise",
   info: [
     {
       fieldName: "Name",
-      value: "Mahadeb Sen",
+      value: "Souvik Samanta",
     },
     {
       fieldName: "Phone",
-      value: "(+91) 7908020943",
+      value: "(+91) 8436892673",
     },
     {
       fieldName: "Experience",
@@ -66,7 +68,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      value: "mahadebsen237@gmail.com",
+      value: "souviksamanta3103@gmail.com",
     },
     {
       fieldName: "Languages",
@@ -85,8 +87,14 @@ const experience = {
     {
       company: "AIMonk Labs Pvt. Ltd.",
       link: "https://aimonk.com",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      position: "Software Development Engineer",
+      duration: "2024 - Present",
+    },
+    {
+      company: "Freelancer",
+      link: "https://souviksamanta.in",
+      position: "Android and Web Developer",
+      duration: "2020 - 2024",
     },
   ],
 };
@@ -99,21 +107,16 @@ const education = {
     "Continuous learner with education in AWS and web development. Enhancing university degree with technical certifications for industry relevance.",
   items: [
     {
-      institution: "Scaler",
-      degree: "AWS Certification",
-      duration: "Aug 2024",
-      link: "https://moonshot.scaler.com/s/sl/m5mXN9udxY?_gl=1*raklxs*_gcl_au*ODQzMDQ4NDM3LjE3MjQ0Nzg2NDE.*FPAU*ODQzMDQ4NDM3LjE3MjQ0Nzg2NDE.*_ga*MTE4MTI2NTQuMTcyNDQ3ODY0Mg..*_ga_53S71ZZG1X*MTcyNDc4NDY3My43LjEuMTcyNDc4NTEyMi4wLjAuMTk4MTkxOTY5NA..",
+      institution: "Kalyani Government Engineering College",
+      degree: "B.Tech. in Computer Science",
+      duration: "2021-2024",
+      link: "https://www.kgec.edu.in/",
     },
     {
-      institution: "Programming Hero",
-      degree: "Complete Web Development",
-      duration: "Dec 2021 - Aug 2022",
-      link: "https://drive.google.com/file/d/1RNo449r3jTkzFoqFC1UuED51qplBF1x1/view",
-    },
-    {
-      institution: "Bankura University",
-      degree: "Graduation",
-      duration: "Jun 2018 - Aug 2021",
+      institution: "The Calcutta Technical School",
+      degree: "Diploma in Computer Science",
+      duration: "2018 - 2021",
+      link: "https://polytechnic.wbtetsd.gov.in/ctskolkata",
     },
   ],
 };
